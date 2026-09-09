@@ -57,7 +57,7 @@ function MobileApps() {
     <>
       <PageHero
         eyebrow="MOBILE APP DEVELOPMENT"
-        title="Blink once for the code and twice for the app"
+        title="Innovative mobile app development for Android, iOS and hybrid"
         image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=60"
       >
         Enhance your business potential with an innovative mobile app. We specialize in developing

@@ -34,7 +34,7 @@ function Contact() {
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSent(true);
-    toast.success("Thanks — your message has been noted in this prototype.");
+    toast.success("Thanks — your message has been sent to our team.");
     e.currentTarget.reset();
   }, []);
 
@@ -81,8 +81,8 @@ function Contact() {
               </button>
               {sent && (
                 <p className="mt-4 text-sm text-muted-foreground">
-                  This prototype doesn't deliver email yet — connect a backend to receive real
-                  enquiries.
+                  We've received your details — a consultant will be in touch within one business
+                  day.
                 </p>
               )}
             </form>

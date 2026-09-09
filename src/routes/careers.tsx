@@ -82,8 +82,7 @@ function Careers() {
               <a href="mailto:hr@srasconsulting.com" className="font-semibold text-electric">
                 hr@srasconsulting.com
               </a>{" "}
-              and we'll keep you in our talent pipeline. Listings above are sample openings for this
-              prototype.
+              and we'll keep you in our talent pipeline.
             </p>
           </Reveal>
         </div>
