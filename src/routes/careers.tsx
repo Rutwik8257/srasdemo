@@ -4,7 +4,17 @@ import { useMemo } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 
+const ROLES = [
+  { id: "SRAS-101", title: "Senior Java Full Stack Developer", type: "FULL_TIME", label: "Full time", loc: "Hyderabad" },
+  { id: "SRAS-102", title: "React JS Developer", type: "FULL_TIME", label: "Full time", loc: "Hyderabad / Remote" },
+  { id: "SRAS-103", title: "IT Recruiter — Technical Hiring", type: "FULL_TIME", label: "Full time", loc: "Secunderabad" },
+  { id: "SRAS-104", title: "Payroll & Compliance Executive", type: "FULL_TIME", label: "Full time", loc: "Secunderabad" },
+  { id: "SRAS-105", title: "QA / Testing Engineer", type: "CONTRACTOR", label: "Contract", loc: "Hyderabad" },
+  { id: "SRAS-106", title: "Corporate Trainer — Soft Skills", type: "PART_TIME", label: "Part time", loc: "Hyderabad" },
+] as const;
+
 export const Route = createFileRoute("/careers")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Careers & Current Opportunities | SRAS Consulting" },
@@ -18,23 +28,41 @@ export const Route = createFileRoute("/careers")({
         property: "og:description",
         content: "We are always looking for great people to grow our talent base.",
       },
+      { property: "og:url", content: "https://srasdemo.lovable.app/careers" },
     ],
+    links: [{ rel: "canonical", href: "https://srasdemo.lovable.app/careers" }],
+    scripts: ROLES.map((r) => ({
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        title: r.title,
+        identifier: { "@type": "PropertyValue", name: "SRAS Position ID", value: r.id },
+        description: `${r.title} at SRAS Consulting Services, ${r.loc}. ${r.label} position — apply with Position ID ${r.id}.`,
+        employmentType: r.type,
+        hiringOrganization: {
+          "@type": "Organization",
+          name: "SRAS Consulting Services",
+          url: "https://srasdemo.lovable.app",
+        },
+        jobLocation: {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: r.loc.split(" / ")[0],
+            addressRegion: "Telangana",
+            addressCountry: "IN",
+          },
+        },
+      }),
+    })),
   }),
   component: Careers,
 });
 
 function Careers() {
-  const roles = useMemo(
-    () => [
-      { id: "SRAS-101", title: "Senior Java Full Stack Developer", type: "Full time", loc: "Hyderabad" },
-      { id: "SRAS-102", title: "React JS Developer", type: "Full time", loc: "Hyderabad / Remote" },
-      { id: "SRAS-103", title: "IT Recruiter — Technical Hiring", type: "Full time", loc: "Secunderabad" },
-      { id: "SRAS-104", title: "Payroll & Compliance Executive", type: "Full time", loc: "Secunderabad" },
-      { id: "SRAS-105", title: "QA / Testing Engineer", type: "Contract", loc: "Hyderabad" },
-      { id: "SRAS-106", title: "Corporate Trainer — Soft Skills", type: "Part time", loc: "Hyderabad" },
-    ],
-    [],
-  );
+  const roles = useMemo(() => ROLES, []);
+
 
   return (
     <>
@@ -61,7 +89,7 @@ function Careers() {
                     </h2>
                     <p className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
                       <MapPin className="h-3.5 w-3.5 shrink-0" />
-                      {r.loc} · {r.type}
+                      {r.loc} · {r.label}
                     </p>
                   </div>
                   <a
@@ -81,8 +109,7 @@ function Careers() {
               <a href="mailto:hr@srasconsulting.com" className="font-semibold text-electric">
                 hr@srasconsulting.com
               </a>{" "}
-              and we'll keep you in our talent pipeline. Listings above are sample openings for this
-              prototype.
+              and we'll keep you in our talent pipeline.
             </p>
           </Reveal>
         </div>

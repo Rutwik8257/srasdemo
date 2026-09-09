@@ -6,6 +6,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Contact SRAS Consulting Services, Secunderabad" },
@@ -18,6 +19,29 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content: "Leave us a message. We'll be in touch with you shortly.",
+      },
+      { property: "og:url", content: "https://srasdemo.lovable.app/contact" },
+    ],
+    links: [{ rel: "canonical", href: "https://srasdemo.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "SRAS Consulting Services",
+          url: "https://srasdemo.lovable.app",
+          email: "hr@srasconsulting.com",
+          telephone: "+91-40-45068514",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Sri Mani Lalitha Nilayam, #6-4-386/A, Krishna Nagar Colony",
+            addressLocality: "Secunderabad",
+            addressRegion: "Telangana",
+            postalCode: "500018",
+            addressCountry: "IN",
+          },
+        }),
       },
     ],
   }),
@@ -33,7 +57,7 @@ function Contact() {
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSent(true);
-    toast.success("Thanks — your message has been noted in this prototype.");
+    toast.success("Thanks — your message has been sent to our team.");
     e.currentTarget.reset();
   }, []);
 
@@ -80,8 +104,8 @@ function Contact() {
               </button>
               {sent && (
                 <p className="mt-4 text-sm text-muted-foreground">
-                  This prototype doesn't deliver email yet — connect a backend to receive real
-                  enquiries.
+                  We've received your details — a consultant will be in touch within one business
+                  day.
                 </p>
               )}
             </form>

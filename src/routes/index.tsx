@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "SRAS Consulting Services | HR & Talent Partner in Hyderabad" },
