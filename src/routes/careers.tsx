@@ -89,7 +89,7 @@ function Careers() {
                     </h2>
                     <p className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
                       <MapPin className="h-3.5 w-3.5 shrink-0" />
-                      {r.loc} · {r.type}
+                      {r.loc} · {r.label}
                     </p>
                   </div>
                   <a
