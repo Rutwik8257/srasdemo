@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CorporateTrainingRouteImport } from './routes/corporate-training'
 import { Route as MobileAppsRouteImport } from './routes/mobile-apps'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WebDevelopmentRouteImport } from './routes/web-development'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebDevelopmentRoute = WebDevelopmentRouteImport.update({
   id: '/web-development',
   path: '/web-development',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/corporate-training': typeof CorporateTrainingRoute
   '/mobile-apps': typeof MobileAppsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/web-development': typeof WebDevelopmentRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/corporate-training': typeof CorporateTrainingRoute
   '/mobile-apps': typeof MobileAppsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/web-development': typeof WebDevelopmentRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/corporate-training': typeof CorporateTrainingRoute
   '/mobile-apps': typeof MobileAppsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/web-development': typeof WebDevelopmentRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/corporate-training'
     | '/mobile-apps'
     | '/services'
+    | '/sitemap.xml'
     | '/web-development'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/corporate-training'
     | '/mobile-apps'
     | '/services'
+    | '/sitemap.xml'
     | '/web-development'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/corporate-training'
     | '/mobile-apps'
     | '/services'
+    | '/sitemap.xml'
     | '/web-development'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   CorporateTrainingRoute: typeof CorporateTrainingRoute
   MobileAppsRoute: typeof MobileAppsRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WebDevelopmentRoute: typeof WebDevelopmentRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/web-development': {
       id: '/web-development'
       path: '/web-development'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateTrainingRoute: CorporateTrainingRoute,
   MobileAppsRoute: MobileAppsRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   WebDevelopmentRoute: WebDevelopmentRoute,
 }
 export const routeTree = rootRouteImport

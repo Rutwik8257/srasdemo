@@ -5,6 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/careers")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Careers & Current Opportunities | SRAS Consulting" },

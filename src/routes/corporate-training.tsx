@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
 export const Route = createFileRoute("/corporate-training")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Corporate Training Programs in Hyderabad | SRAS Consulting" },
