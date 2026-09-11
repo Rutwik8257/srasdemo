@@ -159,13 +159,13 @@ function Home() {
             className="relative"
           >
             <img
-              src={HERO}
-              alt="SRAS consultants collaborating with a client team"
+              src={illusHero}
+              alt="Illustration of a team building a digital dashboard together"
               loading="lazy"
               decoding="async"
               width={1200}
-              height={800}
-              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
+              height={900}
+              className="aspect-[4/3] w-full rounded-2xl bg-white object-cover shadow-2xl"
             />
             <div className="absolute -bottom-6 left-6 rounded-xl bg-background px-5 py-4 text-navy shadow-xl">
               <p className="font-display text-2xl font-extrabold">98%</p>
@@ -237,6 +237,15 @@ function Home() {
                   to={s.to}
                   className="group flex h-full flex-col rounded-xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-xl"
                 >
+                  <img
+                    src={s.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
+                    className="mb-5 aspect-[4/3] w-full rounded-lg bg-secondary object-cover"
+                  />
                   <h3 className="font-display text-lg font-bold text-navy">{s.title}</h3>
                   <p className="mt-3 flex-1 text-sm text-muted-foreground">{s.text}</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric">
