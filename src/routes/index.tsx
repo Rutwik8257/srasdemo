@@ -4,6 +4,11 @@ import { ArrowRight, BadgeCheck, Boxes, Clock4, Users } from "lucide-react";
 import { useMemo } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
+import illusHero from "@/assets/illus-hero.png";
+import illusHr from "@/assets/illus-hr.png";
+import illusTraining from "@/assets/illus-training.png";
+import illusMobile from "@/assets/illus-mobile.png";
+import illusWeb from "@/assets/illus-web.png";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -25,8 +30,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const HERO =
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70";
 
 function Home() {
   const stats = useMemo(
@@ -71,21 +74,25 @@ function Home() {
         to: "/services" as const,
         title: "HR Consulting",
         text: "Technical employment, HR management, payroll processing and turnkey services.",
+        image: illusHr,
       },
       {
         to: "/corporate-training" as const,
         title: "Corporate Training",
         text: "HR and technology training programs delivered by seasoned facilitators.",
+        image: illusTraining,
       },
       {
         to: "/mobile-apps" as const,
         title: "Mobile App Development",
         text: "User-engaging Android, iOS and hybrid applications built to grow your business.",
+        image: illusMobile,
       },
       {
         to: "/web-development" as const,
         title: "Website Development",
         text: "Custom websites that reflect your brand and convert visitors into customers.",
+        image: illusWeb,
       },
     ],
     [],
@@ -150,13 +157,13 @@ function Home() {
             className="relative"
           >
             <img
-              src={HERO}
-              alt="SRAS consultants collaborating with a client team"
+              src={illusHero}
+              alt="Illustration of a team building a digital dashboard together"
               loading="lazy"
               decoding="async"
               width={1200}
-              height={800}
-              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
+              height={900}
+              className="aspect-[4/3] w-full rounded-2xl bg-white object-cover shadow-2xl"
             />
             <div className="absolute -bottom-6 left-6 rounded-xl bg-background px-5 py-4 text-navy shadow-xl">
               <p className="font-display text-2xl font-extrabold">98%</p>
@@ -228,6 +235,15 @@ function Home() {
                   to={s.to}
                   className="group flex h-full flex-col rounded-xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-xl"
                 >
+                  <img
+                    src={s.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
+                    className="mb-5 aspect-[4/3] w-full rounded-lg bg-secondary object-cover"
+                  />
                   <h3 className="font-display text-lg font-bold text-navy">{s.title}</h3>
                   <p className="mt-3 flex-1 text-sm text-muted-foreground">{s.text}</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric">
