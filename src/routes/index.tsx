@@ -4,6 +4,11 @@ import { ArrowRight, BadgeCheck, Boxes, Clock4, Users } from "lucide-react";
 import { useMemo } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
+import illusHero from "@/assets/illus-hero.png";
+import illusHr from "@/assets/illus-hr.png";
+import illusTraining from "@/assets/illus-training.png";
+import illusMobile from "@/assets/illus-mobile.png";
+import illusWeb from "@/assets/illus-web.png";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -71,21 +76,25 @@ function Home() {
         to: "/services" as const,
         title: "HR Consulting",
         text: "Technical employment, HR management, payroll processing and turnkey services.",
+        image: illusHr,
       },
       {
         to: "/corporate-training" as const,
         title: "Corporate Training",
         text: "HR and technology training programs delivered by seasoned facilitators.",
+        image: illusTraining,
       },
       {
         to: "/mobile-apps" as const,
         title: "Mobile App Development",
         text: "User-engaging Android, iOS and hybrid applications built to grow your business.",
+        image: illusMobile,
       },
       {
         to: "/web-development" as const,
         title: "Website Development",
         text: "Custom websites that reflect your brand and convert visitors into customers.",
+        image: illusWeb,
       },
     ],
     [],
