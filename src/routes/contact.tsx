@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useCallback, useState, type FormEvent } from "react";
-import { toast } from "sonner";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 
@@ -13,12 +11,12 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Have any questions? Leave us a message and the SRAS Consulting team in Secunderabad will be in touch with you shortly.",
+          "Reach out to SRAS Consulting Services in Secunderabad for HR consulting, corporate training, and technology services.",
       },
       { property: "og:title", content: "Contact SRAS Consulting Services" },
       {
         property: "og:description",
-        content: "Leave us a message. We'll be in touch with you shortly.",
+        content: "Reach out to SRAS Consulting Services in Secunderabad.",
       },
       { property: "og:url", content: "https://srasdemo.lovable.app/contact" },
     ],
@@ -48,70 +46,17 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const field =
-  "mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-electric";
-
 function Contact() {
-  const [sent, setSent] = useState(false);
-
-  const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSent(true);
-    toast.success("Thanks — your message has been sent to our team.");
-    e.currentTarget.reset();
-  }, []);
-
   return (
     <>
-      <PageHero eyebrow="HAVE ANY QUESTIONS?" title="Leave us a message. We'll be in touch shortly.">
-        Tell us about the roles, training or software you need. Our consultants respond to every
-        enquiry within one business day.
+      <PageHero eyebrow="GET IN TOUCH" title="Contact SRAS Consulting Services">
+        Reach out to us for HR consulting, corporate training, or technology services. Our team is
+        here to help your business grow.
       </PageHero>
 
       <section className="bg-background py-20 md:py-28">
-        <div className="container-x grid gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="container-x max-w-2xl">
           <Reveal>
-            <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-8">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <label className="block text-sm font-medium text-navy">
-                  Your Name
-                  <input required name="name" className={field} placeholder="Ravi Kumar" />
-                </label>
-                <label className="block text-sm font-medium text-navy">
-                  Your Phone Number
-                  <input required name="phone" type="tel" className={field} placeholder="+91 98765 43210" />
-                </label>
-              </div>
-              <label className="mt-6 block text-sm font-medium text-navy">
-                Your Email Address
-                <input required name="email" type="email" className={field} placeholder="you@company.com" />
-              </label>
-              <label className="mt-6 block text-sm font-medium text-navy">
-                Your Message
-                <textarea
-                  required
-                  name="message"
-                  rows={5}
-                  className={field}
-                  placeholder="We're hiring 4 Java developers in Hyderabad..."
-                />
-              </label>
-              <button
-                type="submit"
-                className="mt-7 w-full rounded-md bg-electric px-6 py-3 text-sm font-semibold text-electric-foreground transition-transform hover:-translate-y-0.5 sm:w-auto"
-              >
-                Send message
-              </button>
-              {sent && (
-                <p className="mt-4 text-sm text-muted-foreground">
-                  We've received your details — a consultant will be in touch within one business
-                  day.
-                </p>
-              )}
-            </form>
-          </Reveal>
-
-          <Reveal delay={0.1}>
             <div className="rounded-2xl bg-navy p-8 text-primary-foreground">
               <h2 className="font-display text-xl font-bold">Address</h2>
               <p className="mt-2 text-sm text-primary-foreground/70">
