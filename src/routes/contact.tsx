@@ -18,9 +18,9 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Reach out to SRAS Consulting Services in Secunderabad.",
       },
-      { property: "og:url", content: "https://srasdemo.lovable.app/contact" },
+      { property: "og:url", content: "https://www.srasconsulting.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://srasdemo.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://www.srasconsulting.com/contact" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/contact")({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "SRAS Consulting Services",
-          url: "https://srasdemo.lovable.app",
+          url: "https://www.srasconsulting.com",
           email: "hr@srasconsulting.com",
           telephone: "+91-40-45068514",
           address: {
