@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import aiMobile from "@/assets/ai-mobile.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
@@ -56,6 +57,7 @@ function MobileApps() {
   return (
     <>
       <PageHero
+        image={aiMobile}
         eyebrow="MOBILE APP DEVELOPMENT"
         title="Innovative mobile app development for Android, iOS and hybrid"
         image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=60"

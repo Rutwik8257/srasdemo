@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Briefcase, CircleDollarSign, Settings2, UsersRound } from "lucide-react";
 import { useMemo } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import aiHr from "@/assets/ai-hr.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
@@ -55,6 +56,7 @@ function Services() {
   return (
     <>
       <PageHero
+        image={aiHr}
         eyebrow="SERVICES"
         title="HR consulting built around the right people"
         image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=60"

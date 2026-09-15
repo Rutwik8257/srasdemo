@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { useMemo } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import aiTraining from "@/assets/ai-training.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
@@ -50,6 +51,7 @@ function Training() {
   return (
     <>
       <PageHero
+        image={aiTraining}
         eyebrow="CORPORATE TRAININGS"
         title="Training programs that contribute to business and employee success"
         image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=60"

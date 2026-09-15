@@ -1,13 +1,24 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { memo } from "react";
+import srasLogo from "@/assets/sras-logo.png.asset.json";
 
 export const Footer = memo(function Footer() {
   return (
     <footer className="bg-navy-deep text-primary-foreground">
       <div className="container-x grid gap-10 py-16 md:grid-cols-3">
         <div>
-          <p className="font-display text-xl font-extrabold">SRAS Consulting Services</p>
+          <div className="flex items-center gap-3">
+            <img
+              src={srasLogo.url}
+              alt="SRAS Consulting Services logo"
+              width={44}
+              height={44}
+              loading="lazy"
+              className="h-11 w-11 rounded-md bg-background object-contain p-1"
+            />
+            <p className="font-display text-xl font-extrabold">SRAS Consulting Services</p>
+          </div>
           <p className="mt-3 max-w-sm text-sm text-primary-foreground/70">
             End-to-end HR management, corporate training and technology services for MNCs and
             growing SMEs across Hyderabad.
