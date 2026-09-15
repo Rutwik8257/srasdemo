@@ -63,8 +63,8 @@ function WebDev() {
         <div className="container-x grid gap-12 lg:grid-cols-[1fr_1fr]">
           <Reveal>
             <img
-              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=60"
-              alt="Website design work in progress"
+              src={aiWeb}
+              alt="Developer building a modern website with live code and deployment panels"
               loading="lazy"
               decoding="async"
               width={1200}

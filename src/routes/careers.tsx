@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BriefcaseBusiness, ChevronDown, MapPin } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
+import aiHr from "@/assets/ai-hr.jpg";
 import { Reveal } from "@/components/site/Reveal";
 
 type Role = {
@@ -167,7 +168,7 @@ function Careers() {
       <PageHero
         eyebrow="CAREERS"
         title="Current opportunities at SRAS"
-        image="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=60"
+        image={aiHr}
       >
         Explore our current client openings across Oracle Cloud, Oracle E-Business Suite, and Java
         full-stack development. Review the requirements and apply for the role that matches your
