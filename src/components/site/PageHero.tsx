@@ -5,7 +5,7 @@ type Props = { eyebrow: string; title: string; children?: ReactNode; image?: str
 
 export const PageHero = memo(function PageHero({ eyebrow, title, children, image }: Props) {
   return (
-    <section className="hero-navy relative overflow-hidden text-primary-foreground">
+    <section className="hero-navy relative overflow-hidden text-navy">
       {image && (
         <img
           src={image}
@@ -14,7 +14,7 @@ export const PageHero = memo(function PageHero({ eyebrow, title, children, image
           decoding="async"
           width={1600}
           height={900}
-          className="absolute inset-0 h-full w-full object-cover opacity-15"
+          className="absolute inset-0 h-full w-full object-cover opacity-10"
         />
       )}
       <div className="container-x relative py-20 md:py-28">
@@ -39,7 +39,7 @@ export const PageHero = memo(function PageHero({ eyebrow, title, children, image
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.16 }}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground"
           >
             {children}
           </motion.div>
