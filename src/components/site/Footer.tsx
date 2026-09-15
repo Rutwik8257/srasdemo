@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { memo } from "react";
-import srasLogo from "@/assets/sras-logo.png.asset.json";
+import srasLogo from "@/assets/sras-logo.png";
 
 export const Footer = memo(function Footer() {
   return (
@@ -10,7 +10,7 @@ export const Footer = memo(function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={srasLogo.url}
+              src={srasLogo}
               alt="SRAS Consulting Services logo"
               width={44}
               height={44}
