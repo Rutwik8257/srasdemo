@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import aiWeb from "@/assets/ai-web.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 
@@ -50,9 +51,9 @@ function WebDev() {
   return (
     <>
       <PageHero
+        image={aiWeb}
         eyebrow="WEBSITE DEVELOPMENT"
         title="Build a unique website to convert visitors into customers"
-        image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=60"
       >
         A website is an integral entity of your business. Engage our innovative and future-ready web
         development services to offer visitors an immersive digital experience.
@@ -62,8 +63,8 @@ function WebDev() {
         <div className="container-x grid gap-12 lg:grid-cols-[1fr_1fr]">
           <Reveal>
             <img
-              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=60"
-              alt="Website design work in progress"
+              src={aiWeb}
+              alt="Developer building a modern website with live code and deployment panels"
               loading="lazy"
               decoding="async"
               width={1200}
