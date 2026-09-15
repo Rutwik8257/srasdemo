@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { memo, useCallback, useMemo, useState } from "react";
-import srasLogo from "@/assets/sras-logo.png.asset.json";
+import srasLogo from "@/assets/sras-logo.png";
 
 export const Header = memo(function Header() {
   const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ export const Header = memo(function Header() {
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3.5 lg:flex lg:justify-between">
         <Link to="/" onClick={close} className="flex min-w-0 items-center gap-2.5">
           <img
-            src={srasLogo.url}
+            src={srasLogo}
             alt="SRAS Consulting Services logo"
             width={40}
             height={40}
