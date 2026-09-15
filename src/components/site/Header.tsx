@@ -33,15 +33,16 @@ export const Header = memo(function Header() {
   />
 
   <span className="min-w-0">
-    <span className="block truncate font-display text-base font-extrabold text-[#46BCE7]">
+    <span className="block truncate font-display text-base font-extrabold text-[#008FCB]">
       SRAS
     </span>
 
-    <span className="block truncate text-[11px] tracking-[0.18em] text-[#46BCE7]">
+    <span className="block truncate text-[11px] tracking-[0.18em] text-[#008FCB]">
       CONSULTING SERVICES
     </span>
   </span>
 </Link>
+
 
 
         <nav className="hidden items-center gap-7 lg:flex">
