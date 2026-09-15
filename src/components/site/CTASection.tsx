@@ -13,13 +13,13 @@ export const CTASection = memo(function CTASection({
   return (
     <section className="bg-secondary py-20">
       <div className="container-x">
-        <Reveal className="hero-navy overflow-hidden rounded-2xl px-8 py-14 text-primary-foreground md:px-14">
+        <Reveal className="hero-ink overflow-hidden rounded-2xl px-8 py-14 text-primary-foreground md:px-14">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-extrabold md:text-4xl">{title}</h2>
             <p className="mt-4 text-primary-foreground/75">{text}</p>
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold text-navy-deep transition-transform hover:-translate-y-0.5"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-electric px-6 py-3 text-sm font-semibold text-electric-foreground transition-transform hover:-translate-y-0.5"
             >
               Talk to our team <ArrowRight className="h-4 w-4" />
             </Link>

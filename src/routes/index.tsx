@@ -100,7 +100,7 @@ function Home() {
 
   return (
     <>
-      <section className="hero-navy relative overflow-hidden text-primary-foreground">
+      <section className="hero-navy relative overflow-hidden text-navy">
         <div className="container-x relative grid items-center gap-14 py-20 md:py-28 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <motion.p
@@ -123,7 +123,7 @@ function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.16 }}
-              className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/75"
+              className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground"
             >
               SRAS is a Hyderabad-based consulting firm delivering trusted end-to-end HR management
               services. In a short time we became the vendor of choice for both MNCs and growing
@@ -143,7 +143,7 @@ function Home() {
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center rounded-md border border-white/25 px-6 py-3 text-sm font-semibold transition-colors hover:bg-white/10"
+                className="inline-flex items-center rounded-md border border-navy/15 bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-secondary"
               >
                 Explore services
               </Link>
@@ -163,9 +163,9 @@ function Home() {
               decoding="async"
               width={1200}
               height={900}
-              className="aspect-[4/3] w-full rounded-2xl bg-white object-cover shadow-2xl"
+              className="aspect-[4/3] w-full rounded-2xl bg-card object-cover shadow-xl"
             />
-            <div className="absolute -bottom-6 left-6 rounded-xl bg-background px-5 py-4 text-navy shadow-xl">
+            <div className="absolute -bottom-6 left-6 rounded-xl border border-border bg-background px-5 py-4 text-navy shadow-xl">
               <p className="font-display text-2xl font-extrabold">98%</p>
               <p className="text-xs text-muted-foreground">client retention rate</p>
             </div>
