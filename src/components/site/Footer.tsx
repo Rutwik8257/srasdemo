@@ -53,10 +53,15 @@ export const Footer = memo(function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/75">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-electric" />
-              <span>
+              <a
+                href="https://maps.app.goo.gl/eombWEJX66jxqG7H6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold"
+              >
                 Sri Mani Lalitha Nilayam, #6-4-386/A, Krishna Nagar Colony, Secunderabad,
                 Telangana-500018
-              </span>
+              </a>
             </li>
             <li className="flex gap-3">
               <Phone className="h-4 w-4 shrink-0 text-electric" />
