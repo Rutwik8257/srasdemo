@@ -4,11 +4,11 @@ import { ArrowRight, BadgeCheck, Boxes, Clock4, Users } from "lucide-react";
 import { useMemo } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
-import illusHero from "@/assets/illus-hero.png";
-import illusHr from "@/assets/illus-hr.png";
-import illusTraining from "@/assets/illus-training.png";
-import illusMobile from "@/assets/illus-mobile.png";
-import illusWeb from "@/assets/illus-web.png";
+import aiHero from "@/assets/ai-hero.jpg";
+import aiHr from "@/assets/ai-hr.jpg";
+import aiTraining from "@/assets/ai-training.jpg";
+import aiMobile from "@/assets/ai-mobile.jpg";
+import aiWeb from "@/assets/ai-web.jpg";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -74,25 +74,25 @@ function Home() {
         to: "/services" as const,
         title: "HR Consulting",
         text: "Technical employment, HR management, payroll processing and turnkey services.",
-        image: illusHr,
+        image: aiHr,
       },
       {
         to: "/corporate-training" as const,
         title: "Corporate Training",
         text: "HR and technology training programs delivered by seasoned facilitators.",
-        image: illusTraining,
+        image: aiTraining,
       },
       {
         to: "/mobile-apps" as const,
         title: "Mobile App Development",
         text: "User-engaging Android, iOS and hybrid applications built to grow your business.",
-        image: illusMobile,
+        image: aiMobile,
       },
       {
         to: "/web-development" as const,
         title: "Website Development",
         text: "Custom websites that reflect your brand and convert visitors into customers.",
-        image: illusWeb,
+        image: aiWeb,
       },
     ],
     [],
@@ -157,12 +157,12 @@ function Home() {
             className="relative"
           >
             <img
-              src={illusHero}
-              alt="Illustration of a team building a digital dashboard together"
+              src={aiHero}
+              alt="Consulting team reviewing an AI-powered talent and project dashboard"
               loading="lazy"
               decoding="async"
-              width={1200}
-              height={900}
+              width={1408}
+              height={1056}
               className="aspect-[4/3] w-full rounded-2xl bg-card object-cover shadow-xl"
             />
             <div className="absolute -bottom-6 left-6 rounded-xl border border-border bg-background px-5 py-4 text-navy shadow-xl">
@@ -242,7 +242,7 @@ function Home() {
                     decoding="async"
                     width={800}
                     height={600}
-                    className="mb-5 aspect-[4/3] w-full rounded-lg bg-secondary object-cover"
+                    className="mb-5 aspect-[4/3] w-full rounded-lg bg-navy object-cover"
                   />
                   <h3 className="font-display text-lg font-bold text-navy">{s.title}</h3>
                   <p className="mt-3 flex-1 text-sm text-muted-foreground">{s.text}</p>
