@@ -134,7 +134,7 @@ export const Route = createFileRoute("/careers")({
         content: "Explore current Oracle and Java technology opportunities across India.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://srasdemo.lovable.app/careers" },
+      { property: "og:url", content: "https://www.srasconsulting.com/careers" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://srasdemo.lovable.app/careers" }],
