@@ -65,7 +65,12 @@ function Contact() {
               <ul className="mt-7 space-y-5 text-sm">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                  <span>
+                  <a
+                    href="https://maps.app.goo.gl/eombWEJX66jxqG7H6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-gold"
+                  >
                     SRAS Consulting Services
                     <br />
                     Sri Mani Lalitha Nilayam, #6-4-386/A,
@@ -73,7 +78,7 @@ function Contact() {
                     Krishna Nagar Colony, Secunderabad,
                     <br />
                     Telangana-500018
-                  </span>
+                  </a>
                 </li>
                 <li className="flex gap-3">
                   <Phone className="h-4 w-4 shrink-0 text-gold" />
