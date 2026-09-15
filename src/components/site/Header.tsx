@@ -24,22 +24,25 @@ export const Header = memo(function Header() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-lg">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3.5 lg:flex lg:justify-between">
         <Link to="/" onClick={close} className="flex min-w-0 items-center gap-2.5">
-          <img
-            src={srasLogo}
-            alt="SRAS Consulting Services logo"
-            width={40}
-            height={40}
-            className="h-10 w-10 shrink-0 rounded-md object-contain"
-          />
-          <span className="min-w-0">
-            <span className="block truncate font-display text-base font-extrabold text-navy">
-              SRAS
-            </span>
-            <span className="block truncate text-[11px] tracking-[0.18em] text-muted-foreground">
-              CONSULTING SERVICES
-            </span>
-          </span>
-        </Link>
+  <img
+    src={srasLogo}
+    alt="SRAS Consulting Services logo"
+    width={40}
+    height={40}
+    className="h-10 w-10 shrink-0 rounded-md object-contain"
+  />
+
+  <span className="min-w-0">
+    <span className="block truncate font-display text-base font-extrabold text-[#008FCB]">
+      SRAS
+    </span>
+
+    <span className="block truncate text-[11px] tracking-[0.18em] text-[#008FCB]">
+      CONSULTING SERVICES
+    </span>
+  </span>
+</Link>
+
 
         <nav className="hidden items-center gap-7 lg:flex">
           {nav.map((n) => (
