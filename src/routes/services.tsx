@@ -59,7 +59,6 @@ function Services() {
         image={aiHr}
         eyebrow="SERVICES"
         title="HR consulting built around the right people"
-        image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=60"
       >
         We specialize in scouting for the best talent in the industry. Whether it is short-term
         hires or outsourced human resource management, SRAS Consulting is fully equipped to handle

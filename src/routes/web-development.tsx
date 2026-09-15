@@ -54,7 +54,6 @@ function WebDev() {
         image={aiWeb}
         eyebrow="WEBSITE DEVELOPMENT"
         title="Build a unique website to convert visitors into customers"
-        image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=60"
       >
         A website is an integral entity of your business. Engage our innovative and future-ready web
         development services to offer visitors an immersive digital experience.

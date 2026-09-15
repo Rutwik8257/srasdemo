@@ -54,7 +54,6 @@ function Training() {
         image={aiTraining}
         eyebrow="CORPORATE TRAININGS"
         title="Training programs that contribute to business and employee success"
-        image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=60"
       >
         Corporate training services are the need of the hour. As India's organisations evolve and
         reach new heights, teams need structured learning to keep pace — and Hyderabad, the new IT
