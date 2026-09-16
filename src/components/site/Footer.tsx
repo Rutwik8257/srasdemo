@@ -17,7 +17,7 @@ export const Footer = memo(function Footer() {
               loading="lazy"
               className="h-11 w-11 rounded-md bg-background object-contain p-1"
             />
-            <p
+           <p
               className="text-xl font-bold"
               style={{ fontFamily: '"Times New Roman", Times, serif' }}
             >
