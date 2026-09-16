@@ -17,7 +17,12 @@ export const Footer = memo(function Footer() {
               loading="lazy"
               className="h-11 w-11 rounded-md bg-background object-contain p-1"
             />
-            <p className="font-display text-xl font-extrabold">SRAS Consulting Services</p>
+            <p
+              className="text-xl font-bold"
+              style={{ fontFamily: '"Times New Roman", Times, serif' }}
+            >
+              SRAS Consulting Services
+            </p>
           </div>
           <p className="mt-3 max-w-sm text-sm text-primary-foreground/70">
             End-to-end HR management, corporate training and technology services for MNCs and
