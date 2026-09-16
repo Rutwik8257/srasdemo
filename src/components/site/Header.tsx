@@ -33,7 +33,7 @@ export const Header = memo(function Header() {
   />
 
   <span className="min-w-0">
-    <span className="block truncate text-base font-bold text-[#1D3E8F]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+    <span className="block truncate text-base font-bold text-[#007AA5]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
       SRAS
     </span>
 
